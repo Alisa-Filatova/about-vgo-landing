@@ -52,7 +52,6 @@
       var top = advantage.getBoundingClientRect().top;
       if (top < BORDER) {
         advantage.classList.add('show');
-        advantage.classList.add('on-screen');
       }
     })
   }
@@ -93,7 +92,6 @@
 
   function onDocumentClick(e) {
     if (e.isTrusted !== true) return;
-    if (e.target.classList.contains('link')) modal.classList.toggle('show');
     if (e.target.classList.contains('arrow-down-btn')) scrollTo(window.innerHeight, 1600);
   }
 
